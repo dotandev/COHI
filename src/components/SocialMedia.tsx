@@ -37,18 +37,6 @@ function GitHubIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
     );
 }
 
-function YoutubeIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-    return (
-        <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-            <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2Zm-2 15.5v-9l6 4.5-6 4.5Z"
-            />
-        </svg>
-    );
-}
-
 function DribbbleIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
     return (
         <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
@@ -74,10 +62,10 @@ function XIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 }
 
 export const socialMediaProfiles = [
-    { title: 'Youtube', href: 'https://youtube.com/tws', icon: YoutubeIcon },
-    { title: 'Instagram', href: 'https://instagram.com/tws', icon: InstagramIcon },
-    { title: 'X', href: 'https://x.com/tws', icon: XIcon },
-    // { title: 'GitHub', href: 'https://github.com/wisemrmusa/cohilagos', icon: GitHubIcon },
+    { title: 'Facebook', href: 'https://facebook.com/LagosCOHI', icon: FacebookIcon },
+    { title: 'Instagram', href: 'https://instagram.com/LagosCOHI', icon: InstagramIcon },
+    { title: 'X', href: 'https://x.com/LagosCOHI', icon: XIcon },
+    { title: 'GitHub', href: 'https://github.com/wisemrmusa/cohilagos', icon: GitHubIcon },
 ];
 
 export function SocialMedia({

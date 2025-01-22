@@ -24,9 +24,9 @@
 //     )
 // }
 
-import { FadeIn } from "../../../components/uis/FadeIn";
+import { FadeIn } from "../../../../components/uis/FadeIn";
 import { Container } from '@/components/Container';
-import EmbeddedForm from "../../../components/sections/iform";
+import EmbeddedForm from "../../../../components/sections/iform";
 import image from '../../../../public/m.jpeg'
 import Image from "next/image";
 let link = "https://zfrmz.com/dTlWiPKaB7IBqg3sZofo"

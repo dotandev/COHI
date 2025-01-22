@@ -290,10 +290,10 @@ export function RootLayout({ children }: { children: React.ReactNode; }) {
             </RootLayoutInner> */}
             <div className='bg-[#FDFDF4]'>
                 <div className='mx-5'>
-                {/* <Navbar /> */}
+                <Navbar />
                 </div>
-                <div className='bg-[#FDFDF4]'>{children} COHI LAGOS.</div>
-                {/* <Footer /> */}
+                <div className='bg-[#FDFDF4]'>{children}</div>
+                <Footer />
             </div>
         </RootLayoutContext.Provider>
     );

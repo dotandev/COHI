@@ -27,7 +27,7 @@
 //   );
 // }
 
-import { BasicComponent } from "../about/components/textboard";
+import { BasicComponent } from "./components/textboard";
 import ExecutiveGrid from "./components/executive";
 import image from '@/../public/gal1.svg'
 import coachImage from '@/../public/gal1.svg'

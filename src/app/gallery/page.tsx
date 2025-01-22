@@ -1,12 +1,10 @@
-import { BackgroundBeams } from "@/components/ui/background-beams";
-import { GalleryHero } from "./hero";
+import GalleryOverview from "./components/galleryoverview";
 
-export default function Home() {
+export default function Gallery () {
   return (
-    <main>
-      <GalleryHero /> 
-      {/* <GalleryList />  */}
-      <BackgroundBeams />
+    <main className="min-h-screen bg-black text-white overflow-hidden my-10">
+      <GalleryOverview />
     </main>
-  );
+  )
 }
+
