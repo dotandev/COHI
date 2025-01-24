@@ -4,12 +4,12 @@ interface HeroProps {
   title: string[];
   content?: string;
   alignment?: 'center' | 'left';
-  highlightedWords?: string[]; 
-  highlightColor?: string; 
+  highlightedWords?: string[];
+  highlightColor?: string;
   image?: string;
-  imageAlt?: string; 
-  styles?: React.CSSProperties; 
-  breakIndex?: number; 
+  imageAlt?: string;
+  styles?: React.CSSProperties;
+  breakIndex?: number;
 }
 
 const Hero: React.FC<HeroProps> = ({
@@ -17,17 +17,16 @@ const Hero: React.FC<HeroProps> = ({
   content,
   alignment = 'center',
   highlightedWords = [],
-  highlightColor = '#FF5733', 
+  highlightColor = '#FF5733',
   image,
   imageAlt = 'Hero Image',
   styles,
-  breakIndex, 
+  breakIndex,
 }) => {
   return (
     <div
-      className={`flex flex-col ${
-        alignment === 'center' ? 'lg:items-center lg:text-center' : 'items-start text-left'
-      }`}
+      className={`flex flex-col ${alignment === 'center' ? 'lg:items-center lg:text-center' : 'items-start text-left'
+        }`}
       style={{ padding: '2rem', ...styles }}
     >
       <div className="flex flex-col">
@@ -46,12 +45,12 @@ const Hero: React.FC<HeroProps> = ({
           ))}
         </h1>
       </div>
-      {content && <p className="mt-4 lg:text-lg lg:mx-32 text-black">{content}</p>}
+      {content && <p className={`mt-4 lg:text-lg text-black ${alignment === 'center' ? 'lg:items-center lg:text-center lg:mx-32' : 'items-start text-left'}`}>{content}</p>}
       {image && (
         <img
           src={image}
           alt={imageAlt}
-          className="mt-6 max-w-full h-auto"
+          className="mt-6 max-w-full h-auto justify-center"
           style={{ maxHeight: '400px', objectFit: 'cover' }}
         />
       )}

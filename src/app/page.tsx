@@ -1,17 +1,10 @@
-// import {Hero} from "./components/hero";
-// import AboutUs from "./components/about";
-// import Tournaments from "./components/tournaments";
-// import { Gallery } from "./components/gallery";
-// import { Calendar } from "./components/calendar";
+import { HomeHero } from "./components/home/hero";
+
 
 export default function Home() {
   return (
     <main>
-      {/* <Hero />
-      <AboutUs />
-      <Tournaments />
-      <Gallery />
-      <Calendar /> */}
+      <HomeHero />
     </main>
   );
 }

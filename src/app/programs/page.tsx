@@ -1,5 +1,11 @@
+import { ProgramsHero } from "./components/hero";
+import { ProgramList } from "./components/list";
+
 export default function Programs () {
     return (
-        <div></div>
+        <div>
+            <ProgramsHero />
+            <ProgramList /> 
+        </div>
     )
 }
