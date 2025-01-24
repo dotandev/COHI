@@ -3,8 +3,7 @@
 import { Logo } from '@/components/COHILogo';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
-// import { useRouter } from 'next/router'; // For navigation
-// import logo from '../../../public/logo.png';
+
 
 
 interface NavItem {

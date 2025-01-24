@@ -1,16 +1,22 @@
 import type { Metadata } from "next";
-import { Inter, Manrope } from "next/font/google";
+import { Inter, Manrope, Itim } from "next/font/google";
 import "./globals.css";
 
 import { RootLayout as CustomLayout } from "@/components/uis/RootLayout";
 
 const inter = Inter({ subsets: ["latin"] });
+const itim = Itim(
+  {
+    subsets: ["vietnamese"],
+    weight: "400"
+  }
+);
 const manrope = Manrope({ subsets: ["latin"]});
 
 
 export const metadata: Metadata = {
-  title: "The Word-Smiths (TWS)",
-  description: "The Word-Smiths, the debate club for The University Of Lagos",
+  title: "Council Of Higher Institutions- MSSN Lagos. (COHI)",
+  description: "An Organ of Muslim Students' Society of Nigeria Lagos State Area Unit.",
 };
 
 export default function RootLayout({
@@ -20,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={manrope.className}>
+      <body className={itim.className}>
         <CustomLayout>
         {children}
         </CustomLayout>

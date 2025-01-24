@@ -19,7 +19,7 @@ export default function ParallaxBackground() {
   return (
     <div className="fixed inset-0 z-0">
       <motion.div
-        className="absolute inset-0 bg-gradient-to-b from-purple-900 to-black"
+        className="absolute inset-0"
         style={{ y: y1 }}
       />
       <motion.div

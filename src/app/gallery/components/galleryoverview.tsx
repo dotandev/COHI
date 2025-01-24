@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import ParallaxBackground from "./parallax"
 import GalleryCard from "./gallerycard"
 import Navbar from "@/app/components/navbar"
+import { GalleryHero } from "./hero"
 
 
 const galleries = [
@@ -40,7 +41,8 @@ export default function GalleryOverview() {
   }, [])
 
   return (
-    <div className="relative w-full min-h-screen overflow-hidden">
+    <div className="relative w-full min-h-screen overflow-hidden bg-white">
+      <GalleryHero />
       <ParallaxBackground />
       <motion.div
         className="relative z-10 max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8"
@@ -48,18 +50,14 @@ export default function GalleryOverview() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        {/* <Navbar /> */}
-        <motion.h1 className="text-5xl md:text-7xl font-extrabold text-center mb-12" style={{ y: y1 }}>
-          COHI, <span className="text-[#004617]">IN JPEGS.</span>
-        </motion.h1>
-        <motion.h5 className="text-5xl md:text-7xl font-extrabold text-center mb-12" style={{ y: y1 }}>
+        <motion.h5 className="text-5xl md:text-7xl font-extrabold text-center mb-12 -mt-9" style={{ y: y1 }}>
           Extraordinary Galleries
         </motion.h5>
         <motion.p className="text-xl md:text-2xl text-center mb-16 max-w-3xl mx-auto" style={{ y: y2 }}>
           Explore our mind-blowing collection of visual experiences
         </motion.p>
         <div className="relative">
-          <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-white bg-opacity-50 transform -translate-x-1/2" />
+          <div className="absolute left-1/2 top-0 bottom-0 w-2 bg-black transform -translate-x-1/2" />
           {galleries.map((gallery, index) => (
             <div key={gallery.id} className={`flex justify-${index % 2 === 0 ? "end" : "start"} mb-16`}>
               <GalleryCard

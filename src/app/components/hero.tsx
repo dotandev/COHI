@@ -1,39 +1,62 @@
-import heroimage from '@/../public/heroimage.svg';
+import React from 'react';
 
-const TextHero = () => {
-  return (
-    <section className="bg-[#FDFDF4] text-left py-12 px-6 md:px-12 lg:px-32">
-      <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">
-        Intercollegiate Debate at: University of Lagos
-      </h1>
-      <p className="mt-4 text-sm md:text-base lg:text-lg text-primary">
-        Welcome to The Word-Smiths, where provoking conversations happen! We are a fun community of
-        critical thinkers, fostering eloquence, confidence, and intellectual rigor.
-      </p>
-      <button className="mt-6 px-4 py-2 bg-secondary border-2 border-primary rounded text-primary hover:bg-primary hover:text-white transition duration-300">
-        Join TWS
-      </button>
-    </section>
-  );
-};
+interface HeroProps {
+  title: string[];
+  content?: string;
+  alignment?: 'center' | 'left';
+  highlightedWords?: string[]; 
+  highlightColor?: string; 
+  image?: string;
+  imageAlt?: string; 
+  styles?: React.CSSProperties; 
+  breakIndex?: number; 
+}
 
-const HeroImage = () => {
+const Hero: React.FC<HeroProps> = ({
+  title,
+  content,
+  alignment = 'center',
+  highlightedWords = [],
+  highlightColor = '#FF5733', 
+  image,
+  imageAlt = 'Hero Image',
+  styles,
+  breakIndex, 
+}) => {
   return (
-    <section className="mx-auto flex justify-center px-4 lg:pr-32">
-      <img
-        src={heroimage.src}
-        className="w-[300px] lg:w-[400px] max-w-[1000px] lg:max-w-[1000px] xl:max-w-[1000px]"
-        alt="Hero Image"
-      />
-    </section>
-  );
-};
-
-export const Hero = () => {
-  return (
-    <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-12 mt-8 lg:mt-16">
-      <TextHero />
-      <HeroImage />
+    <div
+      className={`flex flex-col ${
+        alignment === 'center' ? 'lg:items-center lg:text-center' : 'items-start text-left'
+      }`}
+      style={{ padding: '2rem', ...styles }}
+    >
+      <div className="flex flex-col">
+        <h1 className="text-6xl font-bold text-black">
+          {title.map((word, index) => (
+            <React.Fragment key={index}>
+              <span
+                style={{
+                  color: highlightedWords.includes(word) ? highlightColor : undefined,
+                }}
+              >
+                {word}{' '}
+              </span>
+              {breakIndex === index && <br />}
+            </React.Fragment>
+          ))}
+        </h1>
+      </div>
+      {content && <p className="mt-4 lg:text-lg lg:mx-32 text-black">{content}</p>}
+      {image && (
+        <img
+          src={image}
+          alt={imageAlt}
+          className="mt-6 max-w-full h-auto"
+          style={{ maxHeight: '400px', objectFit: 'cover' }}
+        />
+      )}
     </div>
   );
 };
+
+export default Hero;

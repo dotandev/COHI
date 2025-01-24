@@ -30,7 +30,7 @@ export default function GalleryCard({ gallery, index, isHovered, setHoveredGalle
       <Link href={`/gallery/${gallery.id}`}>
         <div className="relative aspect-video bg-gray-900">
           <motion.div
-            className="absolute inset-0 bg-gradient-to-br from-purple-600 to-blue-500"
+            className="absolute inset-0 bg-[#0F973D]"
             animate={{
               scale: isHovered ? 1.1 : 1,
               rotate: isHovered ? 5 : 0,
