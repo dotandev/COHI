@@ -1,5 +1,4 @@
 import Hero from "@/app/components/hero"
-import image from '@/../public/testimg.svg'
 
 export const ExcosHero = () => {
     return (
@@ -10,7 +9,6 @@ export const ExcosHero = () => {
                 alignment="center"
                 highlightedWords={['COHI-LAGOS.']}
                 highlightColor="#0F973D"
-                image={image.src}
             />
         </div>
     )
