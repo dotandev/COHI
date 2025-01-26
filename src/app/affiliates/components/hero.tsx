@@ -11,7 +11,6 @@ export const AffiliateHero = () => {
                 highlightedWords={['THE', 'ARC', 'OF', 'US.']}
                 highlightColor="#0F973D"
                 breakIndex={1}
-                image={image.src}
             />
         </div>
     )
