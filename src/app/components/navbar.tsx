@@ -93,7 +93,7 @@ const Navbar: React.FC = () => {
                             ))}
                         </ul>
                         {/* <div className=' px-8 py-4'> */}
-                        <button className='border-2 border-[#004617] rounded-2xl text-nowrap px-2 py-4'>Join Us</button>
+                        <Link className='text-center items-center justify-center mt-4 cursor-pointer hover:underline underline-offset-4' href={'/magazines'}>Our Magazine</Link>
                         {/* </div> */}
                     </div>
                 )}
@@ -102,7 +102,7 @@ const Navbar: React.FC = () => {
                 <button className='border-2 border-[#004617] rounded-2xl text-nowrap'>Join Us</button>
             </div> */}
             <button className="hidden md:flex border-2 border-[#004617] text-[#004617] rounded-full px-12 text-nowrap font-extrabold text-center justify-center" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                    <p className='text-center items-center justify-center mt-4 cursor-pointer hover:underline underline-offset-4'>Join Us</p>
+                    <Link className='text-center items-center justify-center mt-4 cursor-pointer hover:underline underline-offset-4' href={'/magazines'}>Our Magazine</Link>
                 </button>
         </nav>
     );
