@@ -5,10 +5,10 @@ import { ProgramContainer, ProgramContainerProps } from './container';
 
 export const ProgramList = () => {
     const programs: ProgramContainerProps['program'][] = [
-        { name: 'COHI BUS', description: 'THE COHI BUS Program', link: '/donate/cohi-bus', isCurrent: false, startDate: 'Aug 6, 2023', endDate: 'Aug 6, 2024', badge: 'New' },
-        { name: 'CBC', description: 'Capacity Building Course', link: '/donate/cbc', isCurrent: true, startDate: 'Aug 6, 2023', endDate: 'Aug 6, 2024', badge: 'New' },
-        { name: 'SCF', description: 'Student Career Fest', link: '/donate/scf', isCurrent: false, startDate: 'Aug 6, 2023', endDate: 'Aug 6, 2024', badge: 'New' },
-        { name: 'CIF', description: 'THE Campus Interactive Forum', link: '/donate/m-first', isCurrent: false, startDate: 'Aug 6, 2023', endDate: 'Aug 6, 2024', badge: 'New' },
+        { name: 'COHI BUS', description: 'THE COHI BUS Program', link: '/programs/cohi-bus', isCurrent: false, startDate: 'Aug 6, 2023', endDate: 'Aug 6, 2024', badge: 'New' },
+        { name: 'CBC', description: 'Capacity Building Course', link: '/programs/cbc', isCurrent: true, startDate: 'Aug 6, 2023', endDate: 'Aug 6, 2024', badge: 'New' },
+        { name: 'SCF', description: 'Student Career Fest', link: '/programs/scf', isCurrent: false, startDate: 'Aug 6, 2023', endDate: 'Aug 6, 2024', badge: 'New' },
+        { name: 'CIF', description: 'THE Campus Interactive Forum', link: '/programs/m-first', isCurrent: false, startDate: 'Aug 6, 2023', endDate: 'Aug 6, 2024', badge: 'New' },
     ];
 
     const [activeTab, setActiveTab] = useState('All');

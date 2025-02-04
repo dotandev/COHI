@@ -4,14 +4,14 @@ import "./globals.css";
 
 import { RootLayout as CustomLayout } from "@/components/uis/RootLayout";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 const itim = Itim(
   {
     subsets: ["vietnamese"],
     weight: "400"
   }
 );
-const manrope = Manrope({ subsets: ["latin"]});
+// const manrope = Manrope({ subsets: ["latin"]});
 
 
 export const metadata: Metadata = {

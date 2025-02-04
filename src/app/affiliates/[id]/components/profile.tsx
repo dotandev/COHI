@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { motion } from "framer-motion"
 import type { Institution } from "../../components/affiliate.interface"
-import { CheckBadgeIcon } from "@heroicons/react/20/solid"
+import { BadgeCheckIcon } from "@heroicons/react/solid"
 
 interface InstitutionProfileProps {
   institution: Institution
@@ -33,7 +33,7 @@ export default function InstitutionProfile({ institution }: InstitutionProfilePr
           <div className="ml-6 flex-1">
             <h1 className="text-3xl font-bold flex items-center">
               {institution.name}
-              <CheckBadgeIcon className="w-8 h-8 text-yellow-400 ml-2" />
+              <BadgeCheckIcon className="w-8 h-8 text-yellow-400 ml-2" />
             </h1>
             <p className="text-xl text-gray-600">{institution.abbreviation}</p>
           </div>

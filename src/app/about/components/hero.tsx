@@ -10,7 +10,7 @@ export const AboutHero = () => {
                 alignment="center"
                 highlightedWords={['COHI-LAGOS.']}
                 highlightColor="#0F973D"
-                image={image.src}
+                // image={image.src}
             />
         </div>
     )
